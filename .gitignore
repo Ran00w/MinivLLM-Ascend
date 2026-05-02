@@ -1,0 +1,24 @@
+.codex
+.codex/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data, model weights, and generated artifacts.
+data/
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.log
+
+# OS/editor files.
+.DS_Store
+.idea/
+.vscode/

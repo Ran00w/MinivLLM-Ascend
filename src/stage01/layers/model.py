@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.functional as F
-from attention_torch import attention
-from norm import norm
+from .attention_torch import attention
+from .norm import norm
 
 device = "cuda:0"
 

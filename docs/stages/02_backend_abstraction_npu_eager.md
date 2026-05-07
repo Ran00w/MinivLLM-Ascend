@@ -727,7 +727,7 @@ PYTHONPATH=src python scripts/run_tiny.py --device npu
 如果你当前只有 `scripts/run.py`，也可以先加参数：
 
 ```bash
-PYTHONPATH=src python scripts/run.py --device cpu
+PYTHONPATH=src python scripts/run_stage2.py --device cpu
 PYTHONPATH=src python scripts/run.py --device npu
 ```
 

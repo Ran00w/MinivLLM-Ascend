@@ -1,5 +1,4 @@
 import torch
-import torch_npu
 
 from .base import Backend
 
@@ -8,8 +7,16 @@ class TorchNPUBackend(Backend):
 
     def __init__(self, device_id = 0):
         super().__init__()
+        self._import_error: Exception | None = None
+
         self.device_id = device_id
-        self.device = torch.device(f"npu:{device_id}")
+        try:
+            import torch_npu
+        except Exception as exc:
+            self._import_error = exc
+        else:
+            self.device = torch.device(f"npu:{device_id}")
+        # self.device = torch.device(f"npu:{device_id}")
 
     def is_available(self):
         return hasattr(torch, "npu") and torch.npu.is_available()

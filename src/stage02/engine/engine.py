@@ -5,7 +5,6 @@ from ..layers.model import transformers
 import torch
 import torch.nn as nn
 
-device = "cuda:0"
 
 class Engine:
     def __init__(self, model, sampler, backend):

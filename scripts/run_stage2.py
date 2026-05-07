@@ -27,6 +27,6 @@ if __name__ == '__main__':
     backend.module_to_device(model)
     sampler = Sampler()
     SamplingParams = SamplingParams()
-    engine = Engine(model = model, sampler = sampler)
+    engine = Engine(model = model, sampler = sampler, backend = backend)
     input_tokens = [1,4,9,10,34,23,3,56]
     ans = engine.generate(prompt_token_ids=input_tokens, sampling_params=SamplingParams)

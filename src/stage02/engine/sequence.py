@@ -18,7 +18,7 @@ class Sequence:
         
         self.generated_token_ids.append(token_id)
         
-        if token_id == self.sampling_params.eos_token_id or len(self.generated_token_ids) > self.sampling_params.max_tokens:
+        if token_id == self.sampling_params.eos_token_id or len(self.generated_token_ids) >= self.sampling_params.max_tokens:
             self.finished = True
 
     

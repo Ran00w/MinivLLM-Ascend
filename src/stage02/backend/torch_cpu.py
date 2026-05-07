@@ -1,7 +1,7 @@
 import torch
 from .base import Backend
 
-class TorchCPUbackend(Backend):
+class TorchCPUBackend(Backend):
     name = 'cpu'
     def __init__(self):
         self.device = torch.device('cpu')

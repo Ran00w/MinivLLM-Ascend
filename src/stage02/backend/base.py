@@ -19,11 +19,11 @@ class Backend(ABC):
     def module_to_device(self, module):
         return module.to(self.device)
     
-    def synchronize():
-        raise None
+    def synchronize(self):
+        return None
     
-    def empty_cache():
-        raise None
+    def empty_cache(self):
+        return None
     
     def memory_info(self) -> dict[str, int | None]:
         return {"allocated": None, "reserved": None}

@@ -1,0 +1,16 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class Linear(nn.Module):
+    def __init__(
+        self,
+        in_features: int,
+        out_features: int,
+        bias: bool = False,
+    ) -> None:
+        super().__init__()
+        self.linear = nn.Linear(in_features, out_features, bias=bias)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.linear(x)
